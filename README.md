@@ -52,3 +52,8 @@ https://blog.finxter.com/how-to-convert-list-of-lists-to-list-of-tuples-in-pytho
     df = pd.DataFrame(res, columns=[])
     print(df)
 
+**export a df as a json** 
+```
+data = df.to_json('./youngest2wingp.json', orient='index')
+}
+```
