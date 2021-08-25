@@ -34,3 +34,21 @@ https://blog.finxter.com/how-to-convert-list-of-lists-to-list-of-tuples-in-pytho
     soup= BeautifulSoup(browser.page_source, 'html.parser')
     
     quotes = soup.find_all('div', {'class':'quote'})
+**how to scrape next item from a tag** 
+
+    table = soup.find('span', {'id':'Classificação'}).find_next("table")
+
+**transform a scraped table into a pandas df** 
+
+    table_rows = table.find_all('tr')
+    res = []
+    
+    for tr in table_rows:
+        td = tr.find_all('td')
+        row = [tr.text.strip() for tr in td if tr.text.strip()]
+        if row:
+            res.append(row)
+            
+    df = pd.DataFrame(res, columns=[])
+    print(df)
+
