@@ -57,3 +57,6 @@ https://blog.finxter.com/how-to-convert-list-of-lists-to-list-of-tuples-in-pytho
 data = df.to_json('./youngest2wingp.json', orient='index')
 }
 ```
+```
+bruno finger
+```
